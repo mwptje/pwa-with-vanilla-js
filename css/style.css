@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+/* Reset all elements first */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color, base font size and font family */
+body {
+  background: #fdfdfd;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+/* Containing element main has max width
+   Auto margin left and right
+   Slight padding of 0.5 rem (8px)
+   any inline elements have a center alignment
+ */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/* The nav element needs to be set to display: flex
+   element spacing vertical : align-items: center
+   horizontal spacing: justify-content: space-between
+*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* The UL element also needs a display: flex
+   and remove the list-style = none 
+*/
+ul {
+  list-style: none;
+  display: flex;
+}
+
+/* The li's need some margin inbetween */
+li {
+  margin-right: 1rem;
+}
+
+/* make the h1 logo in nav another color and slight margin-bottom */
+h1 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+/* Here are the setting for the container and individual cards 
+   container uses the css grid
+   - columns are set to auto-fit = wrap when size changes
+   - 15rem if there is enought space, max 1 frame if not
+   - space between columns is 1rem
+   - vertical and horizontal centering */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+/* Card uses a flex display for the inner elements
+   - display is flex
+   - flex direction is column (vertical)
+   - align-items is center 
+   - a 15rem width or auto fallback width
+   - height also 15rem (square)
+   - any overflow is hidden
+   - include box shadow
+*/
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem auto;
+  height: 15rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  margin: auto;
+  overflow: hidden;
+}
+
+/* image .card--avatar
+   - set width to 100%
+   - height = 10rem 
+   - object-fit = cover
+*/
+.card--avatar {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+/* card title */
+.card--title {
+  color: #222;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* card link
+   - remove standard link text decoration
+   - another background color
+   - white text color
+*/
+.card--link {
+  text-decoration: none;
+  background: #db4938;
+  color: #fff;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+}
